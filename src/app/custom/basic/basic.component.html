@@ -1,0 +1,10 @@
+<form [formGroup]="form"  (ngSubmit)="onSubmit()" >
+  Name 
+  <br>
+  <input type="text" formControlName="name">
+  <app-lockinput formControlName="tc"></app-lockinput>
+  <app-lockinput formControlName="tc1"></app-lockinput>
+
+  <button type="submit">Submit</button>
+</form>
+
