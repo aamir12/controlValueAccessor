@@ -17,3 +17,15 @@
        </div>
     </ng-template>
 </span>
+
+
+<br>
+<span *ngFor="let tooltip of tooltips" tooltipDirective>
+    <a href="javascript:void(0)"> {{tooltip.title}} </a>
+    <ng-template #tooltipTemplate>
+    <div class="tooltip-msg-2">
+      <p>{{ tooltip.description }}</p>
+      <button type="button" data-close class="close"> close</button>
+      </div>
+   </ng-template>
+</span>

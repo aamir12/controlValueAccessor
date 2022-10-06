@@ -24,6 +24,7 @@ export class LockinputComponent implements OnInit,ControlValueAccessor {
   ngOnInit(): void {
   }
 
+  
   writeValue(obj: boolean): void {
     this.value = obj
   }
@@ -46,3 +47,30 @@ export class LockinputComponent implements OnInit,ControlValueAccessor {
   }
 
 }
+
+
+/**
+ * Step for Control value accessor
+ */
+//step1 : extends ControlValueAccessor
+
+/* 
+ implements methods
+ 1) writeValue
+ 2) registerOnChange
+ 3) registerOnTouched
+ 4) setDisabledState //optional
+
+ step3 : 
+
+  providers:[
+    {
+      provide:NG_VALUE_ACCESSOR,
+      useExisting:LockinputComponent,
+      multi:true
+    }
+  ]
+
+  
+
+*/

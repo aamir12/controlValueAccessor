@@ -7,8 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TooltipInputComponent implements OnInit {
 
+  tooltips = [
+    {
+      title : 'Tooltip 1',
+      description : 'Lorem data 1'
+    },
+    {
+      title : 'Tooltip 2',
+      description : 'Lorem data 2'
+    }
+  ]
   constructor() { }
-
+  
+  
   ngOnInit(): void {
   }
 
