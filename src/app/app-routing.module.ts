@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren:()=>import('./custom-form/custom-form.module').then(m=>m.CustomFormModule)
   },
   {
+    path:'tooltip',
+    loadChildren:()=>import('./tooltip/tooltip.module').then(m=>m.TooltipModule)
+  },
+  {
     path:'',
     redirectTo:'/custom-basic',
     pathMatch:'full'

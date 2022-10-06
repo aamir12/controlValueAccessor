@@ -1,5 +1,5 @@
 import { Component, forwardRef, Input, OnDestroy, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, NG_VALIDATORS, NG_VALUE_ACCESSOR, Validators } from '@angular/forms';
+import { ControlValueAccessor, FormBuilder, FormControl, FormGroup, NG_VALIDATORS, NG_VALUE_ACCESSOR, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { matchingInputsValidator } from './validators';
 
@@ -25,7 +25,7 @@ export interface PasswordFormValues {
     }
   ]
 })
-export class PasswordFormComponent implements OnInit,OnDestroy {
+export class PasswordFormComponent implements ControlValueAccessor,OnInit,OnDestroy {
   form!: FormGroup;
   subscriptions: Subscription[] = [];
   onChange: any = () => {};
